@@ -1,0 +1,98 @@
+<html>
+<head>
+  <title>Consulta de Infração</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <h3>Consulta de Infrações</h3>
+  <div class="container" id="formulario">
+    <div class="form-group">
+    <input class="form-control" type="text" placeholder="Protocolo da Infração" id="txtID" />
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="password" placeholder="Senha da Infração" id="txtPassword" />
+   </div>
+   <div>
+    <button id= "btnLogin" class="btn btn-success">Consultar</button>
+  </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" id="modal_aberto" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Denúncia</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" id="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="row">
+                <div class="col-md-6" id="conteudo_denuncia"> 
+                <div class="form-group">
+                  <span>Data</span>
+                <input readonly class="form-control" type="text" placeholder="Data..." id="txtData"  />
+                </div>
+                <div class="form-group">
+                <span>Informação da Infração</span>
+                <input readonly class="form-control" type="text" placeholder="Denuncia..." id="txtDenuncia" />
+              </div>
+                <div class="form-group">
+                    <span>Veículo</span>
+                <input readonly class="form-control" type="text" placeholder="Veiculo..." id="txtVeiculo" />
+                </div>
+                <div class="form-group">
+                    <span>Marca do Veículo</span>
+                <input readonly class="form-control" type="text" placeholder="Marca..." id="txtMarca" />
+                </div>
+                <div class="form-group">
+                    <span>Placa do Veículo</span>
+                <input readonly class="form-control" type="text" placeholder="Placa..." id="txtPlaca" />
+                </div>
+                <div class="form-group">
+                    <span>Endereço da Infração</span>
+                <input readonly class="form-control" type="text" placeholder="Local..." id="txtLocal" />
+                </div>
+                <div class="form-group">
+                    <span>Observação</span>
+                <input readonly class="form-control" type="text" placeholder="Observação..." id="txtObservacao" />
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div id="videoplay">
+                    <video id="video" controls src="" width="300" height="450"></video>
+                  </div>  
+                    <div class="btn-group" role="group" aria-label="Basic example" id="videos">
+                      <button type="button" class="btn btn-dark" id="video1">1</button>
+                      <button type="button" class="btn btn-dark" id="video2">2</button>
+                      <button type="button" class="btn btn-dark" id="video3">3</button>
+                    </div>
+                </div>
+                </div>
+                <div id="buttons" class="form-group">
+                  <button id= "close" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/firebase-conf.js"></script>
+
+</body>
+</html>
